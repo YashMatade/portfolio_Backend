@@ -17,7 +17,7 @@ exports.create = async (req, res) => {
             res.status(200).json({ err: 200, msg: "Project saved successfully", data })
         }
     } catch (error) {
-        res.status(500).json({ err: error })
+        res.status(500).json({ err: error.toString() })
     }
 }
 
