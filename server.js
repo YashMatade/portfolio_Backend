@@ -9,7 +9,9 @@ const { mongodbConnection } = require("./config");
 
 const indexRoutes = require("./routes/index");
 app.use(cors());
-
+app.get("/",(req, res)=>{
+    res.send("Server is Running")
+})
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", indexRoutes)
